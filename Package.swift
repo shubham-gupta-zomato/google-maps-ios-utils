@@ -10,7 +10,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "google-maps-ios-utils",
-            targets: ["google-maps-ios-utils"]
+            targets: ["GoogleMapsUtils"]
         )
     ],
     dependencies: [
