@@ -1,8 +1,0 @@
-source 'https://cdn.cocoapods.org/'
-platform :ios, '13.0'
-
-target 'ObjCDemoApp' do
-  use_frameworks!
-  pod 'GoogleMaps', '~> 7.3'
-  pod 'Google-Maps-iOS-Utils', :path => '../..'
-end
