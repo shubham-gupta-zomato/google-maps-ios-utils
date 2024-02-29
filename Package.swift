@@ -20,7 +20,7 @@ let package = Package(
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "google-maps-ios-utils-objC",
+            name: "GoogleMapsUtilsObjC",
             dependencies: [
                 .product(name: "GoogleMaps", package: "ios-maps-sdk"),
                 .product(name: "GoogleMapsBase", package: "ios-maps-sdk"),
@@ -30,13 +30,13 @@ let package = Package(
             publicHeadersPath: "."
         ),
         .target(
-            name: "google-maps-ios-utils-swift",
-            dependencies: ["google-maps-ios-utils-objC"],
+            name: "GoogleMapsUtilsSwift",
+            dependencies: ["GoogleMapsUtilsObjC"],
             path: "Sources/Swift"
         ),
         .target(
-            name: "google-maps-ios-utils",
-            dependencies: ["google-maps-ios-utils-swift"],
+            name: "GoogleMapsUtils",
+            dependencies: ["GoogleMapsUtilsSwift"],
             path: "Sources/ObjC",
             exclude: ["headers"],
             cSettings: [
